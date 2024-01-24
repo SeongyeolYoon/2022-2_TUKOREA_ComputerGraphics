@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Camera">
+      <UniqueIdentifier>{82a04e69-0459-4a90-a9ec-c66bfbfab128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Light">
+      <UniqueIdentifier>{695745d7-af80-419c-bc76-00b51a0d0447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Shader">
+      <UniqueIdentifier>{4ef93d94-6b70-4e76-b977-8eb12b71701a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Pyramid">
+      <UniqueIdentifier>{adc76952-54eb-4021-90cd-403fef9c5674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Default">
+      <UniqueIdentifier>{e2375acb-8b9b-4a7a-87b9-fe9435ab2fb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Object">
+      <UniqueIdentifier>{ee54d0b3-01f6-4227-9508-99a363022c39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Object\Floor">
+      <UniqueIdentifier>{64100a81-874c-41f7-89d5-f3ed2f0c4311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Object\Snow">
+      <UniqueIdentifier>{c94c07c6-bdfc-4770-9b61-336f02b38808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Object\Snow\Pillar">
+      <UniqueIdentifier>{06b71489-e4e9-409d-bc0f-2434a8e64a17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일\Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>소스 파일\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Pillar.cpp">
+      <Filter>소스 파일\Object\Snow\Pillar</Filter>
+    </ClCompile>
+    <ClCompile Include="Snow.cpp">
+      <Filter>소스 파일\Object\Snow</Filter>
+    </ClCompile>
+    <ClCompile Include="Pyramid.cpp">
+      <Filter>소스 파일\Pyramid</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>소스 파일\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor.cpp">
+      <Filter>소스 파일\Object\Floor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Floor.h">
+      <Filter>소스 파일\Object\Floor</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>소스 파일\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>소스 파일\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Pyramid.h">
+      <Filter>소스 파일\Pyramid</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>소스 파일\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Snow.h">
+      <Filter>소스 파일\Object\Snow</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>소스 파일\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Computer_Graphics_Prac_26\stb_image.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Pillar.h">
+      <Filter>소스 파일\Object\Snow</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex.glsl">
+      <Filter>소스 파일\Shader</Filter>
+    </None>
+    <None Include="fragment.glsl">
+      <Filter>소스 파일\Shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>

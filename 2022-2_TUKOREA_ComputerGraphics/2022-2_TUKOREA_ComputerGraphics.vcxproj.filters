@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Prac">
+      <UniqueIdentifier>{51e63f67-6335-4b7d-b196-806d92b84eca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Prac_01.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_02.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_03.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_04.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_05.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_06.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_07.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_08.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_09.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_10.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_11.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_12.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_13.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_14.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_15.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_16.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_17.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_18.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_19.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+    <ClCompile Include="Prac_20.cpp">
+      <Filter>Prac</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

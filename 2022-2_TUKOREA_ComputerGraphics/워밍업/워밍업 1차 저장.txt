@@ -1,0 +1,461 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+int main()
+{
+	bool onToggleD{ false };
+	bool onToggleE{ false };
+	bool onToggleF{ false };
+	bool isPressG{ false };
+	bool isPressH{ false };
+
+	std::string fileName;
+
+	while (true) {
+		std::cout << "Input file name:";
+		std::cin >> fileName;
+		if (std::cin.fail()) {
+			std::cout << "please try agian" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(32767, '\n');
+		}
+		else
+			break;
+	}
+
+	std::ifstream ifs{ fileName };
+
+	while (true) {
+		if (!ifs) {
+			std::cout << "Cannot open file!" << std::endl;
+			return 0;
+		}
+		else {
+			while (true) {
+				std::ifstream ifs{ fileName };
+				system("cls");
+				while (ifs) {
+					std::string str;
+					std::getline(ifs, str);
+					std::cout << str << std::endl;
+				}
+
+				std::cout << "d: Flip the whole sentence" << std::endl;
+				std::cout << "e: Inserting a certain number of spaces at equal intervals" << std::endl;
+				std::cout << "f: Flip characters by spacing" << std::endl;
+				std::cout << "g: Replace certain characters inside the character with other characters, receive new characters to enter" << std::endl;
+				std::cout << "h: To print out how many letters are the same when reading before or after reading" << std::endl;
+				std::cout << "q: EXIT" << std::endl;
+				std::cout << "Input command:";
+				char command;
+
+				while (true) {
+					std::cin >> command;
+
+					if (std::cin.fail()) {
+						std::cout << "please try agian" << std::endl;
+						std::cin.clear();
+						std::cin.ignore(32767, '\n');
+					}
+					else
+						break;
+				}
+
+				switch (command)
+				{
+				case 'd':
+					onToggleD = !onToggleD;
+					break;
+				case 'e':
+					onToggleE = !onToggleE;
+					break;
+				case 'f':
+					onToggleF = !onToggleF;
+					break;
+				case 'g':
+					isPressG = !isPressG;
+					break;
+				case 'h':
+					isPressH = !isPressH;
+					break;
+				case 'q':
+					exit(1);
+					break;
+				default:
+					break;
+				}
+
+				// 출력해야할 부분
+				if (onToggleE) {
+					if (onToggleD) {
+						// E,D,F 모두 적용
+						if (onToggleF) {
+
+							// D, F 적용하고 마지막에 E 적용하면 될 듯 ? 
+
+							
+							std::ifstream ifs{ fileName };
+
+							while (ifs) {
+								int wordCount{ };
+								std::string str;
+								std::getline(ifs, str);
+								std::reverse(str.begin(), str.end());
+
+								std::string token{ " " };
+								int curPosition = 0;
+								int position;
+
+								while ((position = str.find(token, curPosition)) != std::string::npos) {
+									int len = position - curPosition;
+									std::string result = str.substr(curPosition, len);
+
+									for (int i = result.size(); i >= 0; --i) {
+										std::cout << result[i];
+										wordCount++;
+										if (3 == wordCount) {
+											std::cout << "@@";
+											wordCount = 0;
+										}
+									}
+									std::cout << " ";
+									curPosition = position + 1;
+								}
+								wordCount = 0;
+
+								std::string result = str.substr(curPosition);
+								for (int i = result.size(); i >= 0; --i) {
+									std::cout << result[i];
+									wordCount++;
+									if (3 == wordCount) {
+										std::cout << "@@";
+										wordCount = 0;
+									}
+								}
+								std::cout << std::endl;
+							}
+						}
+						// E, D 적용
+						else {
+							std::ifstream ifs{ fileName };
+
+							while (ifs) {
+								int wordCount{ };
+								std::string str;
+								std::getline(ifs, str);
+
+								for (int i = str.length()-1; i >= 0; --i) {
+									std::cout << str[i];
+									wordCount++;
+									if (3 == wordCount) {
+										std::cout << "@@";
+										wordCount = 0;
+									}
+								}
+								std::cout << std::endl;
+							}
+						}
+					}
+					else {
+						// E, F 적용
+						if (onToggleF) {
+
+							std::ifstream ifs{ fileName };
+
+							while (ifs) {
+								std::string str;
+								std::getline(ifs, str);
+								std::string token{ " " };
+								int curPosition = 0;
+								int position;
+								int wordCount{ };
+
+								while ((position = str.find(token, curPosition)) != std::string::npos) {
+									int len = position - curPosition;
+									std::string result = str.substr(curPosition, len);
+									for (int i = result.size()-1; i >= 0; --i) {
+										wordCount++;
+										std::cout << result[i];
+										if (3 == wordCount) {
+											std::cout << "@@";
+											wordCount = 0;
+										}
+									}
+									std::cout << " ";
+									curPosition = position + 1;
+								}
+								std::string result = str.substr(curPosition);
+								for (int i = result.size(); i >= 0; --i) {
+									wordCount++;
+									std::cout << result[i];
+									if (3 == wordCount) {
+										std::cout << "@@";
+										wordCount = 0;
+									}
+								}
+								wordCount = 0;
+								std::cout << std::endl;
+							}
+						}
+						// E 만 적용
+						else {
+							std::ifstream ifs{ fileName };
+
+							while (ifs) {
+
+								int wordCount{ };
+								std::string str;
+								std::getline(ifs, str);
+								
+								for (int i = 0; i < str.length(); ++i) {
+									std::cout << str[i];
+									wordCount++;
+									if (3 == wordCount) {
+										std::cout << "@@";
+										wordCount = 0;
+									}
+								}
+								std::cout << std::endl;
+							}
+						}
+					}
+				}
+				else {
+					if (onToggleD) {
+
+						// D, F 적용
+						// 순서는 D -> F로 하자
+						// 우선 뒤집은 상태에서, 띄어쓰기 단위로 다시 뒤집기
+						if (onToggleF) {
+							std::ifstream ifs{ fileName };
+
+							while (ifs) {
+								std::string str;
+								std::string temp;
+								std::string token{ " " };
+								std::getline(ifs, str);
+								str.append(token);
+
+								std::reverse(str.begin(), str.end());
+
+								//std::cout << str;
+								//std::cout << std::endl;
+
+								int curPosition = 0;
+								int position;
+
+								while ((position = str.find(token, curPosition)) != std::string::npos) {
+									int len = position - curPosition;
+									std::string result = str.substr(curPosition, len);
+
+									for (int i = result.size(); i >= 0; --i) {
+										std::cout << result[i];
+									}
+									std::cout << " ";
+									curPosition = position + 1;
+								}
+								std::string result = str.substr(curPosition);
+								for (int i = result.size(); i >= 0; --i) {
+									std::cout << result[i];
+								}
+								std::cout << std::endl;
+							}
+
+						}
+						// D만 적용
+						else {
+							std::ifstream ifs{ fileName };
+
+							while (ifs) {
+								int wordCount{ };
+								std::string str;
+								std::getline(ifs, str);
+
+								for (int i = str.length(); i >= 0; --i)
+									std::cout << str[i];
+
+								std::cout << std::endl;
+							}
+						}
+					}
+					else {
+						// F만 적용
+						if(onToggleF){
+	/*						char* context = nullptr;
+							char* token = strtok_s(temp, " ", &context);
+							while (token != nullptr) {
+
+								for (int i = strlen(token); i >= 0; --i) {
+									std::cout << token[i];
+								}
+
+								token = strtok_s(nullptr, " ", &context);
+								std::cout << " ";
+							}*/
+
+							std::ifstream ifs{ fileName };
+
+							while (ifs) {
+								std::string str;
+								std::getline(ifs, str);
+								std::string token{ " " };
+								str.append(token);
+								int curPosition = 0;
+								int position;
+
+								while ((position = str.find(token,curPosition)) != std::string::npos) {
+									int len = position - curPosition;
+									std::string result = str.substr(curPosition, len);
+									
+									for (int i = result.size(); i >= 0; --i) {
+										std::cout << result[i];
+									}
+									std::cout << " ";
+									curPosition = position + 1;
+								}
+
+					/*			std::string result = str.substr(curPosition);
+								for (int i = 0; i < result.size(); ++i) {
+									std::cout << result[i];
+								}*/
+								std::cout << std::endl;
+							}
+
+							//std::ifstream ifs{ fileName };
+
+							//while (ifs) {
+							//	std::string str;
+							//	std::getline(ifs, str);
+							//	std::string token{ " " };
+							//	std::vector<std::string> words{ };
+
+							//	size_t pos = 0;
+
+							//	while ((pos = str.find(token)) != std::string::npos) {
+							//		words.push_back(str.substr(0, pos));
+							//		str.erase(0, pos + token.length());
+							//	}
+
+							//	for (const auto& sstr : words)
+							//		std::cout << sstr << " ";
+							//	std::cout << std::endl;
+							//}
+						}
+						// E, D, F 아무것도 적용 X
+						else {
+						// G만 적용
+							if (isPressG) {
+								std::ifstream ifs{ fileName };
+								char change;
+								char changed;
+								while (true) {
+									std::cout << "교체되는 문자와 교체할 문자 입력:";
+									std::cin >> changed >> change;
+
+									if (std::cin.fail()) {
+										std::cout << "다시 입력해주세요" << std::endl;
+										std::cin.clear();
+										std::cin.ignore(32767, '\n');
+									}
+									else
+										break;
+								}
+
+								while (ifs) {
+									std::string str;
+									std::getline(ifs, str);
+									for (int i = 0; i < str.length(); ++i) {
+										if (changed == str[i])
+											str[i] = change;
+										std::cout << str[i];
+									}
+									std::cout << std::endl;
+								}
+								isPressG = !isPressG;
+							}
+							// H만 적용
+							else if (isPressH) {
+								std::ifstream ifs{ fileName };
+								while (ifs) {
+									int asymmetryIndex{ };
+									int symmetryCount{ };
+									bool isBiSymmetry{ true };
+									std::string str;
+									std::getline(ifs, str);
+									str.erase(str.length());
+
+									for (int i = 0; i < str.length() / 2; ++i) {
+										// 대칭 문자열인지 검사
+										// 만약,대칭 문자열이면 
+										// (첫 문자인덱스 + 끝문자 인덱스) /2 인덱스를 저장하고
+										// 위에 인덱스 전까지 출력한다.
+
+										// NOTE : 대칭 검사 조건을 바꿔야 할 수 도 있음
+										// 대칭 문자가 아니면
+										if (str[i] != str[str.length() - 1 - i]) {
+											asymmetryIndex = i;
+											break;
+										}
+										// 대칭 문자가 맞다면
+										else {
+											symmetryCount++;
+											continue;
+										}
+									}
+									if (symmetryCount >= 2) {
+										isBiSymmetry = true;
+
+										for (int i = 0; i < str.length(); ++i) {
+											std::cout << str[i];
+										}
+
+										std::cout << ": ";
+
+										// int midIndex =(0 + str.length()) / 2;
+
+										if (isBiSymmetry) {
+											if (0 != asymmetryIndex) {
+												for (int i = 0; i < asymmetryIndex; ++i) {
+													std::cout << str[i];
+												}
+											}
+											else {
+												for (int i = 0; i < str.length() / 2; ++i) {
+													std::cout << str[i];
+												}
+											}
+										}
+										std::cout << std::endl;
+									}
+									else {
+										isBiSymmetry = false;
+										if (!isBiSymmetry) {
+											for (int i = 0; i < str.length(); ++i) {
+												std::cout << str[i];
+												if (str.length() - 1 == i)
+													std::cout << ": 0" << std::endl;
+											}
+										}
+									}
+									std::cout << std::endl;
+								}
+								isPressH = !isPressH;
+							}
+							// 아무것도 적용이 안되어 있을때.
+							else {
+								std::ifstream ifs{ fileName };
+								while (ifs) {
+									std::string str;
+									std::getline(ifs, str);
+									std::cout << str << std::endl;
+								}
+							}
+						}
+					}
+				}
+				system("pause");
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\00.Default">
+      <UniqueIdentifier>{92449e05-4307-425d-ad2f-72541de3a857}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0.2Crane">
+      <UniqueIdentifier>{7be048cd-8a9c-4c88-aef9-076fa14c05d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Camera">
+      <UniqueIdentifier>{f1dde425-eeef-41e7-8026-7a646c648fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Shader">
+      <UniqueIdentifier>{0e3e4f53-d921-4195-aa87-6886acf51df7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object">
+      <UniqueIdentifier>{a1ae8b32-1b84-40ae-b5e1-d78d4a11eb54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\01.Light">
+      <UniqueIdentifier>{b759245b-cc76-4d44-9bbc-733526cdac33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\00.Floor">
+      <UniqueIdentifier>{017bced6-f9f3-43f0-b2bb-4fad43797183}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일\00.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>소스 파일\01.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor.cpp">
+      <Filter>소스 파일\01.Object\00.Floor</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>소스 파일\05.Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>소스 파일\01.Object\01.Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일\03.Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Crane.cpp">
+      <Filter>소스 파일\0.2Crane</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex.glsl">
+      <Filter>소스 파일\05.Shader</Filter>
+    </None>
+    <None Include="fragment.glsl">
+      <Filter>소스 파일\05.Shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Shader.h">
+      <Filter>소스 파일\05.Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Crane.h">
+      <Filter>소스 파일\0.2Crane</Filter>
+    </ClInclude>
+    <ClInclude Include="Floor.h">
+      <Filter>소스 파일\01.Object\00.Floor</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>소스 파일\03.Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>소스 파일\01.Object\01.Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>소스 파일\01.Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

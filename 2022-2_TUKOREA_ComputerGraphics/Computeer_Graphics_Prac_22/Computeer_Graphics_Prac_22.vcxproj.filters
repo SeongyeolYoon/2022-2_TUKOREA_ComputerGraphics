@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Light">
+      <UniqueIdentifier>{3d731c4f-9993-4b78-b97e-dc80080b05b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hexahedron">
+      <UniqueIdentifier>{817d4032-87e4-4deb-987e-42b2df4c3b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{83e0a705-9d53-4778-9dd2-f81afe0b75ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{907ac01f-771c-4d9f-87fb-8e51d69a0075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CoordSystem">
+      <UniqueIdentifier>{b8e208eb-b4bc-4cb6-b525-308ff92fc4ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sphere">
+      <UniqueIdentifier>{6d0ca464-6ed2-4060-bea8-672447d5724d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Orbit">
+      <UniqueIdentifier>{def766b5-a577-40be-a381-2a8363af145b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SquarePyramid">
+      <UniqueIdentifier>{09aecc03-16c3-4440-a2e7-0064c2476982}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Prac_22.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Hexahedron.cpp">
+      <Filter>Hexahedron</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CoordSystem.cpp">
+      <Filter>CoordSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="Orbit.cpp">
+      <Filter>Orbit</Filter>
+    </ClCompile>
+    <ClCompile Include="SquarePyramid.cpp">
+      <Filter>SquarePyramid</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex.glsl">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="fragment.glsl">
+      <Filter>Shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Hexahedron.h">
+      <Filter>Hexahedron</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CoordSystem.h">
+      <Filter>CoordSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="Orbit.h">
+      <Filter>Orbit</Filter>
+    </ClInclude>
+    <ClInclude Include="SquarePyramid.h">
+      <Filter>SquarePyramid</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
